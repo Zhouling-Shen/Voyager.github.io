@@ -1,0 +1,73 @@
+/* changes any tag in the body section */
+body {
+    text-align: center;
+    background-image: url("../static/voyager screen-01.png");
+    background-repeat: no-repeat;
+    background-size: 100% 900px;
+    
+}
+
+/* changes any class with title in it */
+.title {
+    letter-spacing: 4px;
+    font-size: 8rem;
+    margin-bottom: 5%;
+    color: white;
+    font-family: 'Luckiest Guy';
+
+    /* margin and padding are different, don't know how to explain them though */
+    margin-top: 125px;
+}
+
+/* i looked most of this up */
+/* I ain't no wizard */
+.student {
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    display: block;
+    width: 20%;
+    margin-left: 40%;
+    padding: 14px 20px;
+    text-align: center;
+    margin-top: -4%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}
+
+/* allows to change whatever you want when the mouse hovers over the tag */
+.student:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.teacher {
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    display: block;
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 40%;
+    padding: 14px 20px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    
+}
+
+.teacher:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+footer {
+    margin-top: 28%;
+    font-family: 'Luckiest Guy';
+}
+
+

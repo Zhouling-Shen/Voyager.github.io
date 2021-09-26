@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">   
+
+<!-- Firebase SDKs must be implemented to use Firebase -->
+<!-- <script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js" defer></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"defer></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"defer></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer ></script> -->
+
+  <title>Voyager</title>
+  
+  <link rel="stylesheet" href="../static/addSubtractstyle.css">
+
+</head>
+<body>
+
+   <main> 
+    <header>
+      <!-- <style> background-image: url("../Start Screen/images/log in-02.png") </style> -->
+      <div class="container">
+
+          <h1>VOYAGER</h1>
+          <ul>
+              <!-- <li><a href="levels.html">LEVELS</a></li> -->
+              <!-- CHANGE SAVE BUTTON -->
+              <li id = "save" onclick = "save()"><a> SAVE </a></li>
+              <li id = "signOut" ><a href ="/sessionLogout"> Sign Out </a></li>
+          </ul>
+
+      </div>
+    </header>
+    <div class="wrapper">
+        <!-- WORKING ON -->
+
+        <div class="equation">
+            <h1 id="num1" style=color:brown> num </h1>
+            <h1 id = "sign" style=color:cadetblue> sign </h1>
+            <h1 id="num2" style=color:coral> num </h1>
+            <h1 style=color:darkgray>=</h1>
+            <h1 style=color:firebrick>?</h1>
+
+            <div class = "scoreDisplay"> 
+                <h1 id = "level" style=color:black>level: 1</h1>
+                <h1 id = "score" style=color:black>score: 0</h1>
+            </div>
+
+        </div>
+        <div class="answer-options">
+            <h1 id="option1">1</h1>
+            <h1 id="option2">2</h1>
+            <h1 id="option3">3</h1>
+            <h1 id="option4">4</h1>
+        </div>
+    </div>
+
+        <!-- The Modal -->
+        <div id="incorrectModal" class="modal">
+
+          <div class="modal-content">
+              <span class="close" id = "closeButton">&times;</span>
+              <p>Incorrect!</p>
+              <img src="../static/incorrect.png" alt="incorrect" class = "modal-image">
+              <p class="incorrectAnswer">Try again! :(</p>
+          </div>
+      </div>
+  
+      <!-- The Modal -->
+      <div id="correctModal" class="modal">
+  
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Correct!</p>
+              <img src="../static/correct.png" alt="correct" class = "modal-image">
+              <p class="correctAnswer">Great job!</p>
+          </div>
+      </div>
+   </main>
+</body>
+</html>
+<!-- Firebase SDKs must be implemented to use Firebase -->
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+<!-- other JS scripts -->
+<script src = "../scripts/firebaseConfig.js"></script>
+<script src="../scripts/addSubtract.js"></script> 
+<script src="../scripts/scoreTrack.js"></script>

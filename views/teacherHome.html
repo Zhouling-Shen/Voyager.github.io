@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+        <title>Voyager</title>
+
+        <style>
+            body{
+                background-color: lightskyblue;
+                font-family: 'Luckiest Guy';
+                color: white;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 4.5rem;
+                padding-top: 100px;
+            }
+
+            ul {
+                padding-left: 45%;
+                font-size: 2rem;
+            }
+
+            a { text-decoration: none; color: white; cursor: pointer;}
+            a:visited { text-decoration: none; color:white; }
+            a:hover { text-decoration: none; color:white; }
+            a:focus { text-decoration: none; color:white; }
+            a:hover, a:active { text-decoration: none; color:white;}
+
+            .class, .teachCode {
+                margin-top: 50px;
+            }
+
+            /* The Modal (background) */
+            .modal {
+                color: black !important;
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            
+            /* Modal Content */
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 30%;
+                text-align: center;
+                font-size: 60px;
+            }
+            
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .teacherCode {
+                font-size: 2rem;
+            }
+
+
+        </style>
+    
+    </head>
+    <body>
+    
+        <header>
+            <div class="container">
+        
+                 <h1>VOYAGER</h1>
+                    <ul>
+                        <li class = "teacherButtons"  id = "signOut"><a href = "/sessionLogout"> Sign Out </a></li>  
+                        <li class="class"><a href="/teacherView"> Classes </a></li> 
+                        <li class="teachCode" onclick="addTeacherCode()"><a>ADD CLASS CODE</a></li>
+                    </ul>
+        
+            </div>
+        </header>
+
+
+        <div id="addClassModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>ADD A CLASS</p><br>
+                <p class="realCode"></p><br>
+                <label class="teacherCode" for="code">Class Name:</label>
+                <input style = " border-color:blue;"type="text" id="code" name="code">
+                <!-- <p class="realCode"></p> -->
+                <input type="submit"  onclick="updateClasses()">
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+<!-- other JS scripts -->
+<script src = "../scripts/firebaseConfig.js" defer></script>
+<script src = "../scripts/teacherLogin.js" defer></script>
+<script src = "../scripts/teacherHome.js" defer></script>
