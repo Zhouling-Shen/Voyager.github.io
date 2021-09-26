@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../Styles/style.css">  
+
+        <title>Voyager - Teacher Sign In</title>
+    
+    </head>
+
+    <body>
+        </script>
+    
+        <!-- <h1 id = "voyager">Voyager</h1> -->
+        <h1> Teacher Sign In</h1>
+        <div id = "formContainer">
+
+        <input class = "signIn" placeholder= "email" id = "teacherEmail" required/>
+        <input class = "signIn" placeholder= "password" id = "teacherPassword" required/>
+        <input class = "signIn" type = "teacherId" placeholder= "teacher id" id = "teacherId" required/>
+
+    
+        <!-- <button onclick = "signUp()" id ="signUp"> Sign Up </button> -->
+        <button onclick = "signUp()" id ="signUp"> Sign Up </button>
+        <button onclick = "signIn()" button id ="signIn"> Sign In </button>
+        <!-- <button onclick = "signOut()" id ="signOut"> Sign Out </button> -->
+
+        </div>
+    </body>
+
+    <style>
+        body{
+            background-image: url("../Start Screen/images/log in-02.png");
+            background-color: lightskyblue;
+        }
+
+        h1 {
+            font-size: 40px;
+            letter-spacing: 4px;
+            margin: 100px auto;
+            margin-bottom: 1%;
+            text-align: center;
+            color: white;
+            font-family: 'Luckiest Guy';
+        }
+
+        #formContainer{
+            background-color: darkblue;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            border-radius: 25px 25px 25px 25px;
+            width:25%;
+            height:35%;
+            margin: 10px auto;
+        }
+
+        #header{
+            width:100%;
+            height: 10px;
+            background:black;
+        }
+
+        .signIn{
+            border-top: 40px darkblue;
+            width:70%;
+            height: 40px;
+            display: block;
+            margin: 25 auto;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+        }
+
+        #signUp {
+            background-color: lightskyblue;
+            color: white;
+            border:none;
+            font-weight: bold;
+            padding: 15px 32px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-left: 70px;
+        }
+
+        #signUp:hover {
+            background-color: lightblue;
+            color: black;
+        }
+
+        #signIn {
+            background-color: lightskyblue;
+            color: white;
+            border:none;
+            font-weight: bold;
+            padding: 15px 32px;
+            border-radius: 20px;
+            margin-left:10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        #signIn:hover {
+            background-color: lightblue;
+            color: black;
+        }
+
+        button:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+
+    </style>
+        <!-- the core Firebase JS SDK is always required and must be listed first -->
+       <script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+       <script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+        <!-- JS scripts -->
+        <script src ="../HTML/Scripts/firebaseConfig.js"></script>
+        <script src = "../HTML/Scripts/teacherLogin.js"></script>
+
+
+</html>

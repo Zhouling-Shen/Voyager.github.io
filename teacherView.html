@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Voyager - Classes</title>
+
+    <style>
+        .navigation{
+            background-color: lightskyblue;
+            font-family: 'Luckiest Guy';
+        }
+
+        h1 {
+            float: left;
+            margin-left: 10%;
+            font-size: 3rem;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        #formContainer{
+            background-color: darkblue;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            border-radius: 25px 25px 25px 25px;
+            width:25%;
+            height:35%;
+            margin: 10px auto;
+        }
+
+        #header{
+            width:100%;
+            height: 10px;
+            background:black;
+        }
+
+        button:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .navbar a:hover {
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        .header{
+            float: left;
+            margin-left: 10%;
+            color:white;
+            font-size: 3rem !important;
+        }
+
+        /* .top-container {
+            margin: 5%;
+            padding: 20%; 
+            color: red;
+            background-color: white;
+        } */
+
+        body {
+            background-color: burlywood;
+        }
+
+        .top-container{
+            display: grid; 
+            grid-template-columns: 82% 18%;
+        }
+
+        .title{
+            display: grid; 
+            grid-template-columns: 82% 18%;
+            background-color: white;
+            padding-bottom: 0px;
+        }
+
+        .menu{
+            font-size: 65px;
+            background-color: white;
+            border-radius: 3px;
+            text-align: center;
+            padding-bottom: 20%;
+            /* position: relative; */
+            /* margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px; */
+
+        }
+
+        .answer-options{
+            font-size: 67px;
+            margin-right: 10px;
+
+        }   
+
+        .histTitle{
+            /* padding: 150px auto; */
+            padding-top: 25px;
+            position: absolute;
+        }
+
+        #chart_div {
+            /* position: relative; */
+            margin-top: 75px;
+        }
+
+        .sidebar {
+            background-color: lightgray;
+        }
+
+        .studentTitle {
+            padding-top: 25px;
+            padding-left: 15px;
+        }
+
+    </style>
+    
+    </head>
+
+    <body>
+        
+        <!-- <h1>Voyager</h1> -->
+
+        <div class = "navigation">
+
+            <nav class="navbar navbar-expand-lg the-bar">
+                <a class="navbar-brand header" href="/teacherHome">Voyager</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/teacherHome">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Classes</a> 
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Questions</a>
+                    </li>
+                    <li class = "nav-item">
+                      <a class="nav-link" href="/sessionLogout">Sign out</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+        </div>
+
+        <!-- <div class="title">
+            <h1 class="histTitle"> Class 1</h1>
+        </div> -->
+
+        <div class="top-container">
+
+            <div class="menu">
+                <h1 class="histTitle"> Class 1</h1>
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            </div>
+
+            <div class="sidebar">
+                <h3 class="studentTitle">Students: </h3>
+                <div class="students">
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- the core Firebase JS SDK is always required and must be listed first -->
+       <script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+       <script src = "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+        <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+        <script src = "../scripts/firebaseConfig.js"></script>
+        <!-- <script src = "Scripts/teacherLogin.js"></script> -->
+        <script src="../scripts/teacherView.js"></script>
+
+    </body>
+
+</html>
